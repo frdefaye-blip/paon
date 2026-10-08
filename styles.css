@@ -34,3 +34,8 @@
 .app-preview figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
 .note a { overflow-wrap: anywhere; }
 @media(max-width:450px) { .app-title { gap: 12px; } .app-title img { width: 48px; height: 48px; flex-basis: 48px; } }
+
+/* Les initiales du titre font ressortir le nom PAON. */
+.title-initial {
+    color: #087f8c;
+}
