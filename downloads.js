@@ -7,10 +7,18 @@ const applicationNames = {
     geomada: /^g[eé]omada[-_]/i,
 };
 
+function assetPlatform(filename) {
+    const name = filename.toLowerCase();
+    if (/\.(exe|msi)$/.test(name)) return 'windows';
+    if (name.endsWith('.apk')) return 'android';
+    if (/\.(deb|appimage)$/.test(name)) return 'linux';
+    return null;
+}
+
 function assetDescription(asset) {
     const name = asset.name.toLowerCase();
     let platform = 'Fichier';
-    if (name.endsWith('.exe')) {
+    if (/\.(exe|msi)$/.test(name)) {
         platform = name.includes('portable') ? 'Windows · version portable' : 'Windows · installateur';
     } else if (name.endsWith('.deb')) {
         platform = 'Linux · paquet Debian / Ubuntu';
@@ -42,12 +50,26 @@ function renderRelease(release, assets) {
         const row = document.createElement('li');
         row.className = 'version';
         const info = document.createElement('div');
+        info.className = 'download-info';
+        const platform = assetPlatform(asset.name);
+        if (platform) {
+            const logo = document.createElement('img');
+            logo.className = 'platform-logo';
+            logo.src = `assets/platform-${platform}.svg`;
+            logo.alt = '';
+            logo.width = 36;
+            logo.height = 36;
+            info.append(logo);
+        }
+        const text = document.createElement('div');
+        text.className = 'download-text';
         const name = document.createElement('strong');
         name.className = 'asset-name';
         name.textContent = asset.name;
         const description = document.createElement('small');
         description.textContent = assetDescription(asset);
-        info.append(name, description);
+        text.append(name, description);
+        info.append(text);
         const link = document.createElement('a');
         link.className = 'button';
         link.href = asset.browser_download_url;
