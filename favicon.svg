@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="930" viewBox="200 35 600 930" version="1.1" id="svg10" sodipodi:docname="02-plume-goutte.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)" inkscape:export-filename="anim\paon14.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview id="namedview10" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.9075" inkscape:cx="805.50964" inkscape:cy="444.6281" inkscape:window-width="3840" inkscape:window-height="2071" inkscape:window-x="-9" inkscape:window-y="-9" inkscape:window-maximized="1" inkscape:current-layer="eye" />
+  <title id="title1">Plume de paon — Goutte</title>
+  <desc id="desc1">Emblème organique compact en quatre couleurs. Tous les motifs sont contenus dans la goutte et restent éditables dans Inkscape.</desc>
+  <defs id="defs1">
+    <clipPath id="drop-clip">
+      <path d="M 500,58 C 690,182 790,345 760,515 735,659 628,748 500,921 372,748 265,659 240,515 210,345 310,182 500,58 Z" id="path1" />
+    </clipPath>
+  </defs>
+  <g inkscape:groupmode="layer" inkscape:label="Silhouette principale" id="silhouette" style="display:inline">
+    <path fill="#12304a" d="M 500,55.662457 C 696.34721,183.80484 799.68785,352.25008 768.68565,527.92916 742.8505,676.73968 632.27601,768.71285 500,947.49215 367.72398,768.71285 257.1495,676.73968 231.31434,527.92916 200.31215,352.25008 303.65279,183.80484 500,55.662457 Z" id="path2" style="stroke-width:1.03341" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="Découpes latérales" id="side-cuts" fill="#19b6a5" clip-path="url(#drop-clip)">
+    <path d="m 337.14601,561.19184 c 37.21087,39.61157 73.22139,68.41998 106.8312,90.02629 -24.00701,44.41297 -44.41297,82.82419 -58.81718,115.23366 -27.60806,-61.21788 -46.81367,-128.43752 -48.01402,-205.25995 z" id="path5" style="stroke-width:1.20035" />
+    <path d="m 654.03857,561.19184 c -37.21087,39.61157 -73.22139,68.41998 -106.8312,90.02629 24.00701,44.41297 44.41297,82.82419 58.81718,115.23366 27.60806,-61.21788 46.81367,-128.43752 48.01402,-205.25995 z" id="path6" style="stroke-width:1.20035" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="Œil central" id="eye" clip-path="url(#drop-clip)">
+    <path fill="#d8a526" d="M 500,188.0854 C 624.23034,268.00069 681.80049,357.45811 656.04542,452.87935 631.80536,541.144 560.60016,598.39674 500,644.9146 439.39984,598.39674 368.19464,541.144 343.95458,452.87935 318.19951,357.45811 375.76966,268.00069 500,188.0854 Z" id="path11" style="fill:#19b6a5;fill-opacity:1;stroke-width:1.34426" />
+    <path fill="#d8a526" d="M 500,225 C 582,292 640.6483,362.32491 623.6483,442.32491 607.6483,516.32491 540,569 500,608 460,569 392.3517,516.7145 376.3517,442.7145 359.3517,362.7145 418,292 500,225 Z" id="path7" sodipodi:nodetypes="ccccc" />
+    <circle style="display:inline;fill:#ffffff;fill-opacity:1;stroke-width:9.73638" id="path22" cx="500" cy="411.99197" r="88.631844" />
+    <ellipse cx="500" cy="411.99197" rx="33" ry="33.390354" fill="#12304a" id="ellipse8" style="display:inline;stroke-width:0.834046" />
+    <rect style="display:none;fill:#ffffff;fill-opacity:1;stroke-width:9.73638" id="rect22" width="152.06612" height="6.6115704" x="423.96695" y="408.68619" rx="5.8249912" ry="3.8355005" />
+  </g>
+  <g inkscape:groupmode="layer" inkscape:label="Nervure" id="vein" fill="#d8a526" clip-path="url(#drop-clip)" style="display:inline">
+    <path d="m 474.2259,549.47383 h 51.54821 v 274.8292 L 500,873.52617 474.2259,824.30303 Z" id="path9" style="stroke-width:1.7137" />
+  </g>
+  <metadata id="metadata10">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:title>Plume de paon — Goutte</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
