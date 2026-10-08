@@ -17,7 +17,7 @@ function assetDescription(asset) {
     } else if (name.endsWith('.appimage')) {
         platform = 'Linux · AppImage';
     } else if (name.endsWith('.apk')) {
-        platform = 'Android · APK';
+        platform = name.includes('debug') ? 'Android · APK de test' : 'Android · APK';
     } else if (name.endsWith('.dmg')) {
         platform = 'macOS · image disque';
     } else if (name.endsWith('.zip')) {
