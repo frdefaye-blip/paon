@@ -107,9 +107,31 @@ async function loadDownloads(section) {
             return;
         }
         status.textContent = 'Choisissez le fichier adapté à votre système. La version portable Windows s’utilise sans installation.';
-        current.replaceChildren(renderRelease(available[0].release, available[0].assets));
-        previous.replaceChildren(...available.slice(1).map(item => renderRelease(item.release, item.assets)));
-        history.hidden = available.length < 2;
+        // Chaque plateforme peut avoir son propre numéro de version.
+        // Garder le dernier fichier de chaque format disponible au premier plan.
+        const seenFormats = new Set();
+        const currentGroups = [];
+        const olderGroups = [];
+        for (const item of available) {
+            const latestAssets = [];
+            const olderAssets = [];
+            for (const asset of item.assets) {
+                const name = asset.name.toLowerCase();
+                const extension = name.split('.').pop();
+                const format = `${assetPlatform(name) || 'archive'}-${extension}-${name.includes('portable') ? 'portable' : 'standard'}`;
+                if (seenFormats.has(format)) {
+                    olderAssets.push(asset);
+                } else {
+                    seenFormats.add(format);
+                    latestAssets.push(asset);
+                }
+            }
+            if (latestAssets.length) currentGroups.push(renderRelease(item.release, latestAssets));
+            if (olderAssets.length) olderGroups.push(renderRelease(item.release, olderAssets));
+        }
+        current.replaceChildren(...currentGroups);
+        previous.replaceChildren(...olderGroups);
+        history.hidden = olderGroups.length === 0;
     } catch {
         status.textContent = 'La liste des téléchargements est momentanément indisponible. Vous pouvez consulter les versions sur GitHub ci-dessous.';
     } finally {
