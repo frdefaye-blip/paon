@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>geomada — PAON</title>
-        <meta name="description" content="PAON : présentation de Tada, adapdf et geomada et versions à télécharger.">
+        <title>GéomADA — PAON</title>
+        <meta name="description" content="Un logiciel simple de construction géométrique, intégrant nativement un outil d&#x27;adaptation des consignes, et centré sur les besoins des élèves de l&#x27;école élémentaire et du début de collège.">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
         <link rel="stylesheet" href="styles.css">
         <script defer src="script.js"></script>
@@ -20,9 +20,9 @@
                 </a>
                 <nav aria-label="Navigation principale">
                     <a href="index.html">Accueil</a>
-                    <a href="tada.html">Tada</a>
-                    <a href="adapdf.html">adapdf</a>
-                    <a href="geomada.html" aria-current="page">geomada</a>
+                    <a href="tada.html">TAda</a>
+                    <a href="adapdf.html">adaPDF</a>
+                    <a href="geomada.html" aria-current="page">GéomADA</a>
                 </nav>
             </div>
         </header>
@@ -30,17 +30,21 @@
             <a class="breadcrumb" href="index.html#logiciels">← Tous les logiciels</a>
             <div class="detail-head">
                 <p class="eyebrow">Les logiciels PAON</p>
-                <h1 tabindex="-1">geomada</h1>
-                <p class="intro">Découvrez geomada et les activités que nous développons ensemble.</p>
-                <span class="tag">Présentation provisoire</span>
+                <h1 tabindex="-1" class="app-title">
+                    <img src="assets/logo-geomada.svg" alt="" width="64" height="64">
+                    <span class="app-name app-name-geomada">GéomADA</span>
+                </h1>
+                <p class="intro">Un logiciel simple de construction géométrique, intégrant nativement un outil d&#x27;adaptation des consignes, et centré sur les besoins des élèves de l&#x27;école élémentaire et du début de collège.</p>
             </div>
             <div class="detail-grid">
-                <section>
-                    <h2>À découvrir</h2>
-                    <p>Cette fiche accueillera une description précise du logiciel, ses principales fonctions et des exemples d’utilisation.</p>
-                    <div class="note">
-                        <p>Les fonctionnalités, les systèmes compatibles et les captures d’écran seront ajoutés après validation.</p>
-                    </div>
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu du logiciel</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-geomada.png" aria-label="Voir la capture de GéomADA en grand">
+                            <img width="1590" height="996" src="assets/capture-geomada.png" alt="Interface de GéomADA avec des consignes adaptées par étapes et une construction géométrique composée d’un cercle et d’un triangle." loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
                 </section>
                 <section aria-labelledby="downloads" data-download-app="geomada">
                     <h2 id="downloads">Téléchargements</h2>
@@ -65,7 +69,7 @@
         <footer>
             <div class="wrap footer">
                 <span>PAON · Pédagogie Accessible, Outils Numériques</span>
-                <span>Maquette · contenus à valider</span>
+                <a href="mailto:francois.defaye@ac-limoges.fr">Contact</a>
             </div>
         </footer>
     </body>

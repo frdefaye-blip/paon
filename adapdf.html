@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>adapdf — PAON</title>
-        <meta name="description" content="PAON : présentation de Tada, adapdf et geomada et versions à télécharger.">
+        <title>adaPDF — PAON</title>
+        <meta name="description" content="Un lecteur éditeur de PDF pensé pour répondre aux besoins des élèves.">
         <link rel="icon" href="favicon.svg" type="image/svg+xml">
         <link rel="stylesheet" href="styles.css">
         <script defer src="script.js"></script>
@@ -20,9 +20,9 @@
                 </a>
                 <nav aria-label="Navigation principale">
                     <a href="index.html">Accueil</a>
-                    <a href="tada.html">Tada</a>
-                    <a href="adapdf.html" aria-current="page">adapdf</a>
-                    <a href="geomada.html">geomada</a>
+                    <a href="tada.html">TAda</a>
+                    <a href="adapdf.html" aria-current="page">adaPDF</a>
+                    <a href="geomada.html">GéomADA</a>
                 </nav>
             </div>
         </header>
@@ -30,17 +30,21 @@
             <a class="breadcrumb" href="index.html#logiciels">← Tous les logiciels</a>
             <div class="detail-head">
                 <p class="eyebrow">Les logiciels PAON</p>
-                <h1 tabindex="-1">adapdf</h1>
-                <p class="intro">Découvrez adapdf et sa place parmi les outils de pédagogie accessible.</p>
-                <span class="tag">Présentation provisoire</span>
+                <h1 tabindex="-1" class="app-title">
+                    <img src="assets/logo-adapdf.svg" alt="" width="64" height="64">
+                    <span class="app-name app-name-adapdf"><span class="app-prefix">ada</span>PDF</span>
+                </h1>
+                <p class="intro">Un lecteur éditeur de PDF pensé pour répondre aux besoins des élèves.</p>
             </div>
             <div class="detail-grid">
-                <section>
-                    <h2>À découvrir</h2>
-                    <p>Cette fiche accueillera une description précise du logiciel, ses principales fonctions et des exemples d’utilisation.</p>
-                    <div class="note">
-                        <p>Les fonctionnalités, les systèmes compatibles et les captures d’écran seront ajoutés après validation.</p>
-                    </div>
+                <section aria-labelledby="apercu">
+                    <h2 id="apercu">Aperçu du logiciel</h2>
+                    <figure class="app-preview">
+                        <a href="assets/capture-adapdf.png" aria-label="Voir la capture de adaPDF en grand">
+                            <img width="1231" height="892" src="assets/capture-adapdf.png" alt="Interface d’adaPDF avec une carte de l’Europe, du texte adapté et des légendes modifiables." loading="lazy">
+                        </a>
+                        <figcaption>Cliquer sur la capture pour l’ouvrir en grand.</figcaption>
+                    </figure>
                 </section>
                 <section aria-labelledby="downloads" data-download-app="adapdf">
                     <h2 id="downloads">Téléchargements</h2>
@@ -65,7 +69,7 @@
         <footer>
             <div class="wrap footer">
                 <span>PAON · Pédagogie Accessible, Outils Numériques</span>
-                <span>Maquette · contenus à valider</span>
+                <a href="mailto:francois.defaye@ac-limoges.fr">Contact</a>
             </div>
         </footer>
     </body>

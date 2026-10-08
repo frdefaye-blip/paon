@@ -18,3 +18,19 @@
 .download-text {
     min-width: 0;
 }
+
+/* Identités des applications et captures fournies. */
+.app-logo { display: block; width: 54px; height: 54px; }
+.app-name { font-weight: 800; letter-spacing: -.5px; }
+.app-name-tada { color: #2f64e9; }
+.app-name-geomada { color: #187647; }
+.app-name-adapdf { display: inline-block; color: #fff; background: #183f3a; padding: .05em .3em; border-radius: .15em; }
+.app-name-adapdf .app-prefix { color: #7dd3c7; }
+.app-title { display: flex; align-items: center; gap: 18px; }
+.app-title img { width: 64px; height: 64px; flex: 0 0 64px; }
+.app-preview { margin: 0; }
+.app-preview a { display: block; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: white; }
+.app-preview img { display: block; width: 100%; height: auto; }
+.app-preview figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+.note a { overflow-wrap: anywhere; }
+@media(max-width:450px) { .app-title { gap: 12px; } .app-title img { width: 48px; height: 48px; flex-basis: 48px; } }
