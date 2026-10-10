@@ -5,7 +5,7 @@ Les descriptions restent modifiables directement dans les HTML (indentation : 4 
 
 1. Ouvrir https://github.com/frdefaye-blip/paon/releases
 2. Cliquer sur « Create a new release » / « Draft a new release ».
-3. Créer un tag propre à l'application : tada-v0.6.0, adapdf-v0.3.2, geomada-v0.2.0.
+3. Créer un tag propre à l'application : tada-v0.6.0, adapdf-v0.3.2, geomada-v0.3.0.
 4. Donner un titre clair : « TAda 0.6.0 », par exemple.
 5. Ajouter les nouveautés et déposer les installateurs dans la zone des fichiers joints.
 6. Publier la Release. Les boutons apparaîtront automatiquement sur la fiche correspondante.
@@ -31,11 +31,12 @@ adaPDF :
   adaPDF_0.3.2_x64-setup.exe
   adaPDF-Windows-0.3.2-portable.exe
 GeomADA : 
-  GéomADA_0.2.0_x64-setup.exe
-  GeomADA_0.2.0_Windows_x64_portable.exe
-  GeomADA_0.2.0_amd64.deb
+  GeomADA_0.3.0_x64-setup.exe
+  GeomADA_0.3.0_Windows_x64_portable.exe
+  GeomADA_0.3.0_amd64.deb
+  GeomADA_0.3.0_android-universal-debug.apk
 
-Aucun installateur n'a encore été téléversé. Les dépôts des applications ne sont pas accessibles publiquement.
+Les installateurs sont distribués dans les Releases publiques de PAON. Les dépôts des applications ne sont pas accessibles publiquement.
 Le dépôt PAON permet de distribuer les installateurs sans publier le code source des applications.
 Ne pas ajouter les installateurs aux fichiers du site : les joindre uniquement aux Releases.
 
