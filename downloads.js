@@ -35,7 +35,19 @@ function assetDescription(asset) {
     return `${platform} · ${size} Mio`;
 }
 
-function renderRelease(release, assets) {
+function assetOrder(asset) {
+    const platform = assetPlatform(asset.name);
+    if (platform === 'windows') return asset.name.toLowerCase().includes('portable') ? 1 : 0;
+    if (platform === 'android') return 2;
+    if (platform === 'linux') return 3;
+    return 4;
+}
+
+function compareAssets(a, b) {
+    return assetOrder(a) - assetOrder(b) || a.name.localeCompare(b.name, 'fr');
+}
+
+function renderRelease(release, assets, showAssetRelease = false) {
     const group = document.createElement('div');
     const title = document.createElement('h3');
     title.textContent = release.name || release.tag_name;
@@ -43,10 +55,10 @@ function renderRelease(release, assets) {
     const date = document.createElement('p');
     date.className = 'release-date';
     date.textContent = `Publié le ${new Date(release.published_at).toLocaleDateString('fr-FR')}`;
-    group.append(date);
+    if (!showAssetRelease) group.append(date);
     const list = document.createElement('ul');
     list.className = 'versions';
-    for (const asset of assets) {
+    for (const asset of [...assets].sort(compareAssets)) {
         const row = document.createElement('li');
         row.className = 'version';
         const info = document.createElement('div');
@@ -64,17 +76,23 @@ function renderRelease(release, assets) {
         const text = document.createElement('div');
         text.className = 'download-text';
         const name = document.createElement('strong');
-        name.className = 'asset-name';
-        name.textContent = asset.name;
+        name.className = 'download-label';
+        name.textContent = assetDescription(asset);
         const description = document.createElement('small');
-        description.textContent = assetDescription(asset);
+        description.className = 'asset-name';
+        description.textContent = asset.name;
         text.append(name, description);
+        if (showAssetRelease) {
+            const version = document.createElement('small');
+            version.textContent = `${asset.release.name || asset.release.tag_name} · Publié le ${new Date(asset.release.published_at).toLocaleDateString('fr-FR')}`;
+            text.append(version);
+        }
         info.append(text);
         const link = document.createElement('a');
         link.className = 'button';
         link.href = asset.browser_download_url;
         link.textContent = 'Télécharger';
-        link.setAttribute('aria-label', `Télécharger ${asset.name}`);
+        link.setAttribute('aria-label', `Télécharger ${assetDescription(asset)} (${asset.name})`);
         row.append(info, link);
         list.append(row);
     }
@@ -126,10 +144,10 @@ async function loadDownloads(section) {
                     latestAssets.push(asset);
                 }
             }
-            if (latestAssets.length) currentGroups.push(renderRelease(item.release, latestAssets));
+            currentGroups.push(...latestAssets.map(asset => ({ ...asset, release: item.release })));
             if (olderAssets.length) olderGroups.push(renderRelease(item.release, olderAssets));
         }
-        current.replaceChildren(...currentGroups);
+        current.replaceChildren(renderRelease({ name: 'Versions disponibles' }, currentGroups, true));
         previous.replaceChildren(...olderGroups);
         history.hidden = olderGroups.length === 0;
     } catch {

@@ -40,3 +40,13 @@
     color: #a56b0b;
 }
 
+/* Un fond léger inspiré de l’icône de chaque logiciel. */
+.app-page-tada { --paper: #f0f4fc; --line: #d2dced; }
+.app-page-adapdf { --paper: #fcf2f1; --line: #ead7d5; }
+.app-page-geomada { --paper: #f0f7f2; --line: #d2e2d7; }
+.card { text-decoration: none; }
+.card .text-link { text-decoration: underline; }
+.card:hover { border-color: var(--ink); box-shadow: 0 6px 18px #183f3a12; }
+.card:focus-visible { outline-offset: 5px; }
+.download-label { font-size: 16px; line-height: 1.5; }
+.download-text small { display: block; font-size: 13px; }
