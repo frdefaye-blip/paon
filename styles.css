@@ -41,12 +41,17 @@
 }
 
 /* Un fond léger inspiré de l’icône de chaque logiciel. */
-.app-page-tada { --paper: #f0f4fc; --line: #d2dced; }
-.app-page-adapdf { --paper: #fcf2f1; --line: #ead7d5; }
-.app-page-geomada { --paper: #f0f7f2; --line: #d2e2d7; }
+.app-page-tada { --paper: #e3ecfc; --line: #d2dced; }
+.app-page-adapdf { --paper: #fbe5e3; --line: #ead7d5; }
+.app-page-geomada { --paper: #e2f1e7; --line: #d2e2d7; }
 .card { text-decoration: none; }
 .card .text-link { text-decoration: underline; }
 .card:hover { border-color: var(--ink); box-shadow: 0 6px 18px #183f3a12; }
 .card:focus-visible { outline-offset: 5px; }
 .download-label { font-size: 16px; line-height: 1.5; }
 .download-text small { display: block; font-size: 13px; }
+
+/* Les cartes reprennent le fond de la page de leur logiciel. */
+.card-tada { background: #e3ecfc; }
+.card-adapdf { background: #fbe5e3; }
+.card-geomada { background: #e2f1e7; }
